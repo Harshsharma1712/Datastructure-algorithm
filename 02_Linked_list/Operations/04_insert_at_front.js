@@ -26,7 +26,7 @@ function printList(head){
         curr = curr.next
     }
 
-    // console.log(result)
+    console.log(result)
 }
 
 let head = new Node(2)
