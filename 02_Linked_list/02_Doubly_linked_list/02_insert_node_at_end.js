@@ -39,6 +39,8 @@ class DoublyLinkedList{
             curr = curr.next
         }
 
+        result += "null"
+
         console.log(result)
     }
 }
