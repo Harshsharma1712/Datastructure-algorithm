@@ -18,9 +18,6 @@ class Queue {
         if(this.front === null && this.rear === null){
             console.log("Queue is empty.");
             return
-        } else{
-            console.log("Queue is not empty.");
-            return
         }
     }
 
@@ -85,7 +82,7 @@ class Queue {
         let current = this.front;
         let queueValues = "";
         while (current !== null) {
-            queueValues += current.data + " -> ";
+            queueValues += current.data + " <- ";
             current = current.next;
         }
         queueValues += "null"; // End of the queue
@@ -107,3 +104,6 @@ queue.printQueue();
 queue.dequeue();
 queue.dequeue();
 queue.printQueue();
+
+queue.getFront();
+queue.getRaer();
