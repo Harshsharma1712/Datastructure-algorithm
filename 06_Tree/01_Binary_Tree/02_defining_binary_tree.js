@@ -1,4 +1,4 @@
-// NOte it is just a basic exampe for defining
+// Note it is just a basic exampe for defining
 
 class Node {
     constructor(item) {
