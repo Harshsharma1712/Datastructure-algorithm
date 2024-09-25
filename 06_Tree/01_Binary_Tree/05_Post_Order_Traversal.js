@@ -5,31 +5,29 @@
          / \   \
         4   5   6
 
-        InOrder Traversal is: 4 -> 2 -> 5 -> 1 -> 3 -> 6
+        Post Order Traversal => 4 -> 5 -> 2 -> 6 -> 3 -> 1
 */
 
 class Node {
     constructor(v) {
-        this.data = v;
-        this.left = null;
-        this.right = null;
+      this.data = v;
+      this.left = null;
+      this.right = null;
     }
 }
 
-function printInOrderTraversal(node) {
-    // Base case
+function printPostOrder(node) {
     if(node === null)
         return;
 
     // First recur on left subtree
-    printInOrderTraversal(node.left);
+    printPostOrder(node.left);
+
+    // Then recur on right subtree
+    printPostOrder(node.right);
 
     // Now deal with the node
     console.log(node.data);
-    // process.stdout.write(node.data + " ");
-
-    // Then recur on right subtree
-    printInOrderTraversal(node.right);
 }
 
 const root = new Node(1);
@@ -47,5 +45,5 @@ root.right.right = new Node(6);
         4   5   6
 */
 
-console.log("In order traversal of given tree is:");
-printInOrderTraversal(root);
+console.log("Post Oreder traversal is: ");
+printPostOrder(root);
